@@ -51,6 +51,11 @@ void Stack<T>::Push(T Value)
 template<typename T>
 T Stack<T>::Pop()
 {
+    if (top < 0)
+    {
+        std::cout << "\n더 빼낼것이 없습니다!";
+        return -1;
+    }
     return stack[--top];
 }
 
